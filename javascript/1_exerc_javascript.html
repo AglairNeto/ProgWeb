@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Primeiro exercício de JavaScript</title>
+    <meta charset="UTF-8"/>
+</head>
+<body>
+            
+            <img src="natiruts.jpg" alt="natiruts" width="120">
+            <h1>Natiruts</h1>
+        
+
+    <p>Não chora, a nossa vida é feita mesmo para se aprender,E agora, 
+		é hora de tentar se libertar não vai doer,Deixe a energia do som te levar 
+      A vibe positiva solta pelo ar</p>
+
+    <table>
+        <tr>
+            <td><div id="contandoLike">0</div></td><td>curtiram isso</td> 
+            <td><button id="like" onclick="somandoLike()">Like</button></td>
+    </table>
+
+    <p>Comentários</p>
+
+    <div id="comentario"></div>
+    
+    
+    <textarea cols="20"rows="5" id="textoComentado"></textarea>
+    <button id="botaoComent" onclick="fazerComentario()">Comentar</button>
+
+    <script>
+        var botaoLike = document.getElementById("like");
+
+        function somandoLike(){
+            var contandoLike = document.getElementById("contandoLike");
+
+            var aux = contandoLike.innerHTML;
+            aux++;
+            contandoLike.innerHTML = aux;
+        }
+
+        var botaoComent = document.getElementById("botaoComent");
+        var comentario = document.getElementById("comentario");
+        var textoComentado = document.getElementById("textoComentado");
+
+        function fazerComentario(){
+            comentario.innerHTML += textoComentado.value + "<br/>";
+        }
+    </script>
+</body>
+</html>
